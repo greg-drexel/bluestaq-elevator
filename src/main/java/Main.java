@@ -6,8 +6,8 @@
  * State, and Template design patterns. The MovementStrategy might not be the
  * best fit for the strategy design pattern, however I wanted to include it more
  * for the pattern and not so much the logic. Other design patterns that I am
- * familiar with that are not included in this challenge are factory, builder,
- * and decorator. And also wrapper, although not technically a design pattern.
+ * familiar with that are not included in this challenge are Factory, Builder,
+ * and Decorator. And also Wrapper, although not technically a design pattern.
  * </p>
  * <p>
  * Comments: Excluded most comments in favor of clean code. Have had projects
