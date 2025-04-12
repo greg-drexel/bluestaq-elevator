@@ -3,11 +3,9 @@ import java.util.List;
 
 public class ElevatorController {
 	private static ElevatorController instance;
-	private ElevatorContext context;
 	private List<Elevator> elevators;
 
-	public ElevatorController(ElevatorContext context) {
-		this.context = context;
+	public ElevatorController() {
 		elevators = new ArrayList<>();
 		elevators.add(new FreightElevator());
 		elevators.add(new GuestElevator());
@@ -16,7 +14,7 @@ public class ElevatorController {
 
 	public static ElevatorController getInstance() {
 		if (instance == null) {
-			instance = new ElevatorController(new ElevatorContext());
+			instance = new ElevatorController();
 		}
 		return instance;
 	}
@@ -39,6 +37,24 @@ public class ElevatorController {
 		}
 	}
 
+	public void enableAdminState(int index) {
+		if (index >= 0 && index < elevators.size()) {
+			elevators.get(index).enableAdminState();
+			System.out.println("Enabled admin state to elevator " + index + ".");
+		} else {
+			System.out.println("Elevator " + index + " is out of bounds.");
+		}
+	}
+
+	public void disableAdminState(int index) {
+		if (index >= 0 && index < elevators.size()) {
+			elevators.get(index).disableAdminState();
+			System.out.println("Disabled admin state to elevator " + index + ".");
+		} else {
+			System.out.println("Elevator " + index + " is out of bounds.");
+		}
+	}
+
 	public void start() {
 		System.out.println("Starting Elevator controller.");
 
@@ -48,5 +64,12 @@ public class ElevatorController {
 		requestFloor(1, 7);
 		requestFloor(2, 8);
 		moveElevators();
+
+		/* Test Admin State */
+		System.out.println("Testing admin state.");
+		enableAdminState(1);
+		requestFloor(1, 3);
+		moveElevators();
+		disableAdminState(1);
 	}
 }

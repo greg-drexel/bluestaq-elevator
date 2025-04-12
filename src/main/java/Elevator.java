@@ -3,7 +3,7 @@ import java.util.List;
 
 abstract class Elevator {
 	private MovementStrategy movementStrategy;
-	private ElevatorState currentState;
+	private ElevatorContext context;
 	private int currentFloor;
 	private List<Integer> floorRequests;
 	private int doorTimer;
@@ -13,35 +13,31 @@ abstract class Elevator {
 		this.doorTimer = doorTimer;
 		this.currentFloor = 1;
 		this.floorRequests = new ArrayList<>();
-		this.currentState = new IdleState();
+		this.context = new ElevatorContext(this);
 	}
 
 	public void requestFloor(int floor) {
-		currentState.requestFloor(this, floor);
+		context.requestFloor(floor);
 	}
 
 	public void moveToFloor() {
-		currentState.moveToFloor(this);
+		context.moveToFloor();
 	}
 
 	public void openDoors() {
-		currentState.openDoors(this);
+		context.openDoors();
 	}
 
 	public void closeDoors() {
-		currentState.closeDoors(this);
-	}
-
-	public void setState(ElevatorState state) {
-		currentState = state;
+		context.closeDoors();
 	}
 
 	public void enableAdminState() {
-		setState(new AdminState());
+		context.enableAdminState();
 	}
 
 	public void disableAdminState() {
-		setState(new IdleState());
+		context.disableAdminState();
 	}
 
 	protected MovementStrategy getMovementStrategy() {
@@ -64,6 +60,7 @@ abstract class Elevator {
 
 	protected void setCurrentFloor(int floor) {
 		currentFloor = floor;
+		updateDisplay(floor);
 	}
 
 	public int getDoorTimer() {
@@ -85,5 +82,4 @@ abstract class Elevator {
 	private void updateDisplay(int floor) {
 		System.out.println("Floor: " + floor);
 	}
-
 }
