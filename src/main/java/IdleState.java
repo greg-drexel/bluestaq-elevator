@@ -8,8 +8,7 @@ public class IdleState implements ElevatorState {
 
 	@Override
 	public void moveToFloor(Elevator elevator) {
-		elevator.setState(new MovingState());
-		elevator.moveToFloor();
+		elevator.requestFloor(elevator.getFloorRequests().get(0));
 	}
 
 	@Override
