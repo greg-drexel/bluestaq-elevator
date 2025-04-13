@@ -1,10 +1,14 @@
 /**
  * Bluestaq Code Challenge - Elevator Simulation
  * <p>
- * Assumptions: 1. Hard coded 1 freight, 1 guest, and 1 service elevator. If we
- * were to use this solution for multiple buildings that may have different
- * number of elevators, then I would use an XML or JSON configuration file to
- * define the elevators for each implementation.
+ * Assumptions:
+ * <ul>
+ * <li>1) Hard coded 1 freight, 1 guest, and 1 service elevator. If we were to
+ * use this solution for multiple buildings that may have different number of
+ * elevators, then I would use an XML or JSON configuration file to define the
+ * elevators for each implementation.</li>
+ * <li>2)</li>
+ * </ul>
  * </p>
  * <p>
  * Design patterns: Attempted to build a solution that showcased numerous design
