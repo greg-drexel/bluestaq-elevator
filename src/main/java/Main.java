@@ -6,8 +6,12 @@
  * <li>1) Hard coded 1 freight, 1 guest, and 1 service elevator. If we were to
  * use this solution for multiple buildings that may have different number of
  * elevators, then I would use an XML or JSON configuration file to define the
- * elevators for each implementation.</li>
- * <li>2)</li>
+ * elevators for each implementation. Or implement an Admin GUI.</li>
+ * <li>2) Floor requests only accept integers and do not account for basement or
+ * "B" or penthouse "P" values.</li>
+ * <li>3) Move to floor is only FIFO. For example, elevator won't stop on floor
+ * 8 if moving to floor 10. Could be optimized.</li>
+ * <li>4) There are no external up / down buttons for floors.</li>
  * </ul>
  * </p>
  * <p>
