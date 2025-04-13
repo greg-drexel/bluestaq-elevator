@@ -40,3 +40,8 @@
   challenge, I followed the basic principles from the book Clean Code by Robert
   Martin.
 </p>
+<p>
+  <h2>UML:</h2>
+</p>
+
+![Elevator System Class Diagram](images/Elevator_UML.png)
