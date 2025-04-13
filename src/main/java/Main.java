@@ -27,7 +27,7 @@
  * Comments: Excluded most comments in favor of clean code. Have had projects
  * managers and professors that either love or hate comments. For this code
  * challenge, I followed the basic principles from the book Clean Code by Robert
- * Marting.
+ * Martin.
  * </p>
  *
  * @author Greg Reckenwald
