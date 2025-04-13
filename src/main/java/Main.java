@@ -1,6 +1,12 @@
 /**
  * Bluestaq Code Challenge - Elevator Simulation
  * <p>
+ * Assumptions: 1. Hard coded 1 freight, 1 guest, and 1 service elevator. If we
+ * were to use this solution for multiple buildings that may have different
+ * number of elevators, then I would use an XML or JSON configuration file to
+ * define the elevators for each implementation.
+ * </p>
+ * <p>
  * Design patterns: Attempted to build a solution that showcased numerous design
  * patterns. In this challenge you will see examples of the Singleton, Strategy,
  * State, and Template design patterns. The MovementStrategy might not be the
@@ -12,12 +18,8 @@
  * <p>
  * Comments: Excluded most comments in favor of clean code. Have had projects
  * managers and professors that either love or hate comments. For this code
- * challenge, I followed the basic principles of the book Clean Code by Robert
- * Marting which states, "The proper use of comments is to compensate for our
- * failure to express yourself in code. Note that I used the word failure. I
- * meant it. Comments are always failures. We must have them because we cannot
- * always figure out how to express ourselves without them, but their use is not
- * a cause for celebration." (Clean Code, page 54)
+ * challenge, I followed the basic principles from the book Clean Code by Robert
+ * Marting.
  * </p>
  *
  * @author Greg Reckenwald
