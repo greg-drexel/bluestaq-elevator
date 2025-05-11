@@ -1,4 +1,4 @@
-<h1>Bluestaq Code Challenge - Elevator Simulation</h1>
+<h1>Code Challenge - Elevator Simulation</h1>
 <p>
   <h2>Assumptions:</h2>
   <ol>
